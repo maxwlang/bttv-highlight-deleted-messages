@@ -68,6 +68,8 @@ class ChatDeletedMessagesModule {
         $message.hide();
       } else if (showDeletedMessages) {
         $message.toggleClass(CHAT_LINE_DELETED_CLASS, true);
+        $message.css('background-color', '#ff0000');
+
         /* eslint-disable-next-line func-names */
         $message.find(CHAT_LINE_LINK_SELECTOR).each(function () {
           const $link = $(this);
